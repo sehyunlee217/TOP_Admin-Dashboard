@@ -3,17 +3,15 @@ body{
     height: 100vh;
     margin: 0;
     box-sizing: border-box;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: minmax(auto,1fr) 9fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
 }
-
 
 .sidebar{
     background-color:#10b98183;
@@ -23,13 +21,30 @@ body{
     grid-area: sidebar;
     grid-row: span 2;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 0.5em;
     grid-template-rows: repeat(auto-fit,minmax(1em, 2em));
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
 
     padding: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
 }
 
+.sidebar>span{
+    justify-self: center;
+}
+
+.gap{
+    grid-column: span 2;;
+}
+
+.dash{
+    font-size: 1.3em;
+    gap: 0.5em;
+}
 .header{    
+    min-width: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 0em 2em;
 
@@ -51,8 +66,6 @@ body{
     width: 2em;
     clip-path: circle();    
 }
-
-
 
 .left,.right{
     display: flex;
@@ -84,6 +97,22 @@ input{
     align-items: center;
 }
 
+.profile_left{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.user_ID{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.id_line1{
+    font-size: 0.7em;
+}
+
 .profile_btns{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -103,38 +132,46 @@ input{
 
 .large{
     color: black;
-    display: flex;
     width: 3em;
 }
 
 .content{
     background-color: rgba(129, 129, 129, 0.272);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     grid-area: content;
     display: grid;
+    padding: 1em;
 
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-        "project announcement"
-        "project trending"
+        "project right_sidebar"
     ;
 }
 
 .projects{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-right: 1em;
     grid-area: project;
+    display: grid;
+    grid-template-rows: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 1em;
 }
 
-.announce{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    grid-area: announcement;
+.title{
+    grid-column: 1 / -1;
+    height: 1em;
 }
 
+.box{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    min-height: 350px;
+}
 
-.trending{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    grid-area: trending;
+.right_sidebar{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-rows: 1em 1fr 1em 1fr;
 }
 
 

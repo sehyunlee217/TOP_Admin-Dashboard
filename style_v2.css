@@ -1,0 +1,249 @@
+body{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color:#1665347b ;
+}
+
+/* Left Dashboard */
+
+.dashboard_left{
+    flex: 1;
+    border-right: 2px solid #042f2e0e;
+
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-rows: repeat(auto-fit,minmax(1em, 2em));
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+
+    padding: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 1.2em;}
+
+.dash{
+    font-size: 1.5em;
+}
+
+.gap{
+    grid-column: span 2;
+}
+
+/* Header Section */
+
+.main{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    flex: 1;
+    background-color: white;
+    padding: 1em 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header_top{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input{
+    border-radius: 50px;
+    width: 100%;
+    height: 2em;
+    background-color: rgba(129, 129, 129, 0.331);
+    border: none;
+    padding-left: 1em;
+}
+
+.left{
+    width: 60%;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+img{
+    width: 100%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.profile_bio>h2,p{
+    margin: 0;
+}
+
+.profile_pic{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 2em;
+    clip-path: circle();    
+}
+
+.bigger{
+    min-width: 4em;
+}
+
+.header_profile{
+    flex: 1 ;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 100px);
+    grid-gap: 1em;
+    align-items: center;
+}
+
+button{
+    display: flex;
+    color: whitesmoke;
+    width: fit-content;
+    max-height: 2em;
+    min-width: 5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #1665347b ;
+    border: 0;
+    border-radius: 1em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    color: #166534b1;
+}
+
+/* Main Content Section */
+
+.content{
+    flex: 7;
+    background-color: rgba(211, 211, 211, 0.694);
+    display: flex;
+    padding: 2em;
+    gap: 1em;
+}
+
+.projects{
+    flex: 3;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2em repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1em;
+    overflow: auto;
+    padding-right: 1em;
+}
+
+.project{
+    background-color: whitesmoke;
+    border-radius: 1em;
+    border-left: 0.5em solid rgba(161, 21, 21, 0.735);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: auto;
+    padding: 1em;
+}
+
+.projects>.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project_text{
+    padding-top: 2em;
+}
+
+.project_name{
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 0.5em
+}
+
+p{
+    color: rgb(110, 110, 110);
+}
+
+.logo{
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+    padding-right: 1em;
+}
+
+
+.title{
+    grid-column: 1 / -1;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.right_sidebar{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em    ;
+}
+
+.announce{
+    flex: 1;
+    display: grid;
+    grid-template-rows: 2em 1fr;
+    grid-gap: 1em;
+}
+
+h4{
+    margin: 0;
+}
+
+.announce_grid{
+    display: grid;
+    grid-gap: 1em;;
+}
+
+.trending{
+    flex: 1;
+    display: grid;
+    grid-template-rows: 2em 1fr;
+    grid-gap: 1em;
+}
+
+.trending_grid{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.trending_prof{
+    display: flex;
+    align-items: center;
+    gap: 2em    ;
+}
+
+.trending_prof>.profile_pic{
+    min-width: 3em;
+}
+
+
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
