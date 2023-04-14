@@ -6,7 +6,7 @@
 
 - Used CSS grid and Flexbox to format and organize elements.
 - Nested CSS grid inside of Flexbox or vice-versa for responsive webpage. 
-- All icons are from <a href="https://fonts.google.com/icons">Google Material Icons</a>
+- All icons are from <a href="https://fonts.google.com/icons">Google Material Icons</a> & Images are from <a href="https://unsplash.com/">Unsplash</a>
 
 ## Web Development Progress @ <a href="https://www.theodinproject.com/">The Odin Project</a>
 
